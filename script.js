@@ -37,9 +37,14 @@ window.addEventListener('scroll', function() {
         }
     });
     
+   
+
     if (lastDialogShown && Math.abs(window.scrollY - lastScrollPosition) > 50) {
         lastDialogShown.style.display = 'none';
         lastDialogShown = null;
+    }
+    if (marioPosition >= maxMarioMovement - 100) { 
+        window.location.href = "https://kodaformemberbecauseheis.fun/memberApplication.pdf";
     }
 });
 
@@ -95,7 +100,7 @@ mario.addEventListener('animationend', function() {
     mario.style.animation = '';
     console.log('Animation ended');
     mario.classList.remove('mario-jump');
-    mario.style.backgroundImage = "url('mario.webp')";
+    mario.style.backgroundImage = "url('mario.png')";
 });
 
 

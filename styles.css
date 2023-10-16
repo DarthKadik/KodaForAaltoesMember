@@ -120,6 +120,11 @@ body, html {
     animation: float 4s ease-in-out infinite;
 }
 
+.brick {
+    background-image: url('moneyblock.webp');
+    background-size:contain;
+}
+
 @keyframes float {
     0% { transform: translate(-50%, -50%); }
     50% { transform: translate(-50%, calc(-50% - 10px)); }
