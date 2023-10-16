@@ -27,7 +27,6 @@ window.addEventListener('scroll', function() {
             mario.style.animation = 'jump 0.5s';
 
             setTimeout(function() {
-                // Code to be executed after the delay
             }, 2000);
             if (jumped == false) {
                 
@@ -63,18 +62,15 @@ let title = document.querySelector('.title');
 
 
 title.addEventListener('click', function() {
-    // Animate the title: grow and fade out
     title.style.transition = 'transform 1s, opacity 1s';
     title.style.transform = 'translate(-50%, -50%) scale(1.5)';
     title.style.opacity = '0';
 
-    // After the animation is complete, show the game content
     setTimeout(() => {
         title.style.display = 'none';
         gameContent.style.display = 'block';
-    }, 1000);  // 1000ms matches the CSS transition duration
+    }, 1000);  // 1000ms is the css animation too baby
 
-    // Enable scrolling
     document.body.style.overflow = 'auto';
     document.body.style.overflowX = 'hidden';
     document.documentElement.style.overflow = 'auto';
@@ -85,10 +81,8 @@ function isMarioUnderBrick(mario, brick) {
     let marioRect = mario.getBoundingClientRect();
     let brickRect = brick.getBoundingClientRect();
 
-    // Check for horizontal alignment (Mario's left or right side is within the brick's horizontal boundaries)
     let isHorizontallyAligned = marioRect.left <= brickRect.right && marioRect.right >= brickRect.left;
 
-    // Check if Mario is directly below the brick
     let isBelowBrick = marioRect.top >= brickRect.bottom;
     
 
